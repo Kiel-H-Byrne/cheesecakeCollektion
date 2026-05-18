@@ -74,7 +74,7 @@ export function Products() {
               <div className="h-72 relative overflow-hidden">
                 <Image
                   src={product.image}
-                  alt={product.name}
+                  alt={`${product.name} bejeweled cheesecake cup-cake - The Cheesecake Collection`}
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />

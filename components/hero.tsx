@@ -9,7 +9,7 @@ export function Hero() {
       <div className="absolute inset-0 z-0">
         <Image
           src="/hero-background.jpg"
-          alt="Artisan Cheesecake Collection"
+          alt="Gourmet bejeweled cheesecakes for events in Atlanta and DMV - The Cheesecake Collection"
           fill
           className="object-cover scale-105 animate-slow-zoom"
           priority

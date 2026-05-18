@@ -36,13 +36,13 @@ export function Footer() {
                 <div className="w-8 h-8 rounded-full bg-secondary flex items-center justify-center group-hover:bg-primary transition-colors">
                   <MapPin className="w-4 h-4 text-primary group-hover:text-primary-foreground transition-colors" />
                 </div>
-                <span className="text-muted-foreground">Atlanta, GA Metro Area</span>
+                <span className="text-muted-foreground">Atlanta, GA & DMV Area (DC, MD, VA)</span>
               </div>
               <div className="flex items-center space-x-3 text-sm group cursor-default">
                 <div className="w-8 h-8 rounded-full bg-secondary flex items-center justify-center group-hover:bg-primary transition-colors">
                   <Phone className="w-4 h-4 text-primary group-hover:text-primary-foreground transition-colors" />
                 </div>
-                <span className="text-muted-foreground">DM for Custom Inquiries</span>
+                <span className="text-muted-foreground">Perfect for Baby Showers & Graduations</span>
               </div>
               <div className="flex items-center space-x-3 text-sm group cursor-default">
                 <div className="w-8 h-8 rounded-full bg-secondary flex items-center justify-center group-hover:bg-primary transition-colors">
