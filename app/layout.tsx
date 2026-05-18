@@ -17,9 +17,16 @@ const sourceSans = Source_Sans_3({
 })
 
 export const metadata: Metadata = {
-  title: "The Cheesecake Collection | Atlanta's Finest Cup-Cakes",
+  metadataBase: new URL("https://www.cheesecakecollection.net"),
+  title: "The Cheesecake Collection | Gourmet Event Cheesecakes Atlanta & DMV",
   description:
-    "Handcrafted gourmet cheesecake cup-cakes made with premium natural ingredients. Family-owned Atlanta bakery serving 6 signature flavors.",
+    "Handcrafted bejeweled cheesecake cup-cakes for baby showers, graduations, and birthdays. Serving Atlanta, GA and the DMV area. Discover our artisanal gourmet collection.",
+  keywords: ["cheesecake cupcakes", "atlanta bakery", "DMV dessert catering", "baby shower desserts", "graduation cakes", "birthday cheesecakes", "gourmet desserts atlanta"],
+  openGraph: {
+    title: "The Cheesecake Collection | Premium Event Cheesecakes",
+    description: "Exquisite handcrafted cheesecake creations for your most special occasions in Atlanta and the DMV.",
+    images: ["/hero-background.jpg"],
+  },
     generator: 'v0.app'
 }
 
@@ -28,8 +35,45 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Bakery",
+    "name": "The Cheesecake Collection",
+    "image": "https://www.cheesecakecollection.net/hero-background.jpg",
+    "description": "Handcrafted bejeweled cheesecake cup-cakes for special events in Atlanta and the DMV.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Atlanta",
+      "addressRegion": "GA",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 33.7490,
+      "longitude": -84.3880
+    },
+    "url": "https://www.cheesecakecollection.net",
+    "telephone": "+1-555-0123",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      }
+    ],
+    "servesCuisine": "Dessert, Cheesecake",
+    "areaServed": ["Atlanta, GA", "DMV Area (DC, Maryland, Virginia)"]
+  }
+
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className={`${playfairDisplay.variable} ${sourceSans.variable} antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           {children}

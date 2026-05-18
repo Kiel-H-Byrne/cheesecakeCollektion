@@ -46,7 +46,7 @@ export function ServiceArea() {
               How to <span className="text-primary">Order</span>
             </h2>
             <p className="text-lg text-muted-foreground text-balance max-w-2xl mx-auto font-sans">
-              We deliver our gourmet creations within 30 miles of Atlanta. Verify your area and reach out to start your collection.
+              We deliver our gourmet creations within 30 miles of Atlanta and now serving the DMV area. Verify your area and reach out to start your collection.
             </p>
           </div>
 
@@ -60,7 +60,7 @@ export function ServiceArea() {
               </CardHeader>
               <CardContent className="p-8 space-y-8 flex-1">
                 <p className="text-sm text-muted-foreground">
-                  Enter your ZIP code to see if you're within our signature delivery zone.
+                  Enter your ZIP code for Atlanta delivery, or DM us for special event catering in the <strong className="text-primary">DMV area</strong>.
                 </p>
                 <div className="flex space-x-3">
                   <Input

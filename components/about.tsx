@@ -14,7 +14,7 @@ export function About() {
             Crafted with <span className="text-primary italic">Passion</span>
           </h2>
           <p className="text-lg text-muted-foreground text-balance leading-relaxed max-w-2xl mx-auto font-sans font-light">
-            Born from a passion for perfection, The Cheesecake Collection brings you artisanal creations that redefine indulgence.
+            Born from a passion for perfection, The Cheesecake Collection brings you artisanal creations that redefine indulgence. Whether you're celebrating a <strong className="text-primary font-bold">baby shower</strong>, <strong className="text-primary font-bold">graduation</strong>, or <strong className="text-primary font-bold">birthday</strong>, our signature bejeweled cheesecakes add a touch of luxury to every event in the <strong className="text-primary font-bold">Atlanta</strong> and <strong className="text-primary font-bold">DMV</strong> areas.
           </p>
         </div>
 
@@ -23,7 +23,7 @@ export function About() {
             <div className="relative h-[500px] rounded-3xl overflow-hidden elegant-shadow-lg transition-transform duration-500 group-hover:scale-[1.02]">
               <Image
                 src="/about-1.jpg"
-                alt="Our Process"
+                alt="Gourmet cheesecake catering for baby showers and graduations in Atlanta"
                 fill
                 className="object-cover"
               />
@@ -31,7 +31,7 @@ export function About() {
             <div className="absolute -bottom-6 -right-6 w-48 h-48 rounded-2xl overflow-hidden border-8 border-background elegant-shadow hidden md:block">
               <Image
                 src="/about-2.jpg"
-                alt="Close up"
+                alt="Close up of bejeweled cheesecake cup-cake for birthdays"
                 fill
                 className="object-cover"
               />
@@ -80,7 +80,7 @@ export function About() {
         <div className="relative h-96 w-full rounded-3xl overflow-hidden elegant-shadow">
           <Image
             src="/about-3.jpg"
-            alt="The Collection"
+            alt="The Cheesecake Collection - Premium event dessert catering Atlanta and DMV"
             fill
             className="object-cover"
           />
