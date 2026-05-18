@@ -6,37 +6,37 @@
 :root {
   /* Luxury elegant color tokens - light mode */
   --background: #ffffff; /* Pure white background */
-  --foreground: #000000; /* Black text */
-  --card: #f9f9f9; /* Light gray cards */
-  --card-foreground: #000000; /* Black text on cards */
+  --foreground: #1a1a1a; /* Deep Chocolate/Black text */
+  --card: #ffffff; /* White cards */
+  --card-foreground: #1a1a1a; /* Deep Chocolate text on cards */
   --popover: #ffffff; /* White popover */
-  --popover-foreground: #000000; /* Black text on popover */
-  --primary: #000000; /* Black primary */
+  --popover-foreground: #1a1a1a; /* Deep Chocolate text on popover */
+  --primary: #d4af37; /* Gold primary */
   --primary-foreground: #ffffff; /* White text on primary */
-  --secondary: #d4af37; /* Gold secondary */
-  --secondary-foreground: #000000; /* Black text on secondary */
-  --muted: #f9f9f9; /* Light muted */
-  --muted-foreground: #4b5563; /* Gray muted text */
-  --accent: #d4af37; /* Gold accent */
-  --accent-foreground: #000000; /* Black text on accent */
-  --destructive: #e3342f;
+  --secondary: #fff0f3; /* Blush Pink secondary */
+  --secondary-foreground: #d4af37; /* Gold text on secondary */
+  --muted: #fff5f7; /* Very light Blush Pink for muted backgrounds */
+  --muted-foreground: #6b7280; /* Gray muted text */
+  --accent: #fce4ec; /* Blush Pink accent */
+  --accent-foreground: #d4af37; /* Gold text on accent */
+  --destructive: #ef4444;
   --destructive-foreground: #ffffff;
-  --border: #e2e8f0; /* Light gray borders */
+  --border: #f3f4f6; /* Light gray borders */
   --input: #ffffff; /* White input background */
   --ring: rgba(212, 175, 55, 0.5); /* Gold focus ring */
-  --chart-1: #000000;
-  --chart-2: #d4af37;
-  --chart-3: #f9f9f9;
-  --chart-4: #4b5563;
+  --chart-1: #d4af37;
+  --chart-2: #fce4ec;
+  --chart-3: #1a1a1a;
+  --chart-4: #6b7280;
   --chart-5: #ffffff;
-  --radius: 0.5rem; /* Elegant rounded corners */
-  --sidebar: #000000;
-  --sidebar-foreground: #ffffff;
+  --radius: 0.75rem; /* Softer rounded corners */
+  --sidebar: #ffffff;
+  --sidebar-foreground: #1a1a1a;
   --sidebar-primary: #d4af37;
-  --sidebar-primary-foreground: #000000;
-  --sidebar-accent: #d4af37;
-  --sidebar-accent-foreground: #000000;
-  --sidebar-border: #e2e8f0;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #fce4ec;
+  --sidebar-accent-foreground: #d4af37;
+  --sidebar-border: #f3f4f6;
   --sidebar-ring: rgba(212, 175, 55, 0.5);
   --font-source-sans: "Source Sans Pro", sans-serif;
   --font-playfair: "Playfair Display", serif;
@@ -44,63 +44,74 @@
 
 .dark {
   /* Luxury elegant color tokens - dark mode */
-  --background: #0a0a0a; /* Very dark background */
+  --background: #1a1a1a; /* Deep Chocolate background */
   --foreground: #ffffff; /* White text */
-  --card: #1a1a1a; /* Dark cards */
+  --card: #2a1f1a; /* Darker Chocolate cards */
   --card-foreground: #ffffff; /* White text on cards */
-  --popover: #1a1a1a; /* Dark popover */
+  --popover: #2a1f1a; /* Darker Chocolate popover */
   --popover-foreground: #ffffff; /* White text on popover */
-  --primary: #d4af37; /* Gold primary in dark mode */
-  --primary-foreground: #000000; /* Black text on primary */
-  --secondary: #2a2a2a; /* Dark secondary */
-  --secondary-foreground: #d4af37; /* Gold text on secondary */
-  --muted: #1a1a1a; /* Dark muted */
+  --primary: #d4af37; /* Gold primary */
+  --primary-foreground: #1a1a1a; /* Deep Chocolate text on primary */
+  --secondary: #3d2b1f; /* Medium Chocolate secondary */
+  --secondary-foreground: #fce4ec; /* Blush Pink text on secondary */
+  --muted: #2a1f1a; /* Darker Chocolate muted */
   --muted-foreground: #9ca3af; /* Light gray muted text */
   --accent: #d4af37; /* Gold accent */
-  --accent-foreground: #000000; /* Black text on accent */
-  --destructive: #e3342f;
+  --accent-foreground: #1a1a1a; /* Deep Chocolate text on accent */
+  --destructive: #ef4444;
   --destructive-foreground: #ffffff;
-  --border: #2a2a2a; /* Dark borders */
-  --input: #1a1a1a; /* Dark input background */
+  --border: #3d2b1f; /* Medium Chocolate borders */
+  --input: #2a1f1a; /* Darker Chocolate input background */
   --ring: rgba(212, 175, 55, 0.5); /* Gold focus ring */
-  --chart-1: #ffffff;
-  --chart-2: #d4af37;
-  --chart-3: #1a1a1a;
+  --chart-1: #d4af37;
+  --chart-2: #fce4ec;
+  --chart-3: #ffffff;
   --chart-4: #9ca3af;
-  --chart-5: #0a0a0a;
-  --sidebar: #0a0a0a;
+  --chart-5: #1a1a1a;
+  --sidebar: #1a1a1a;
   --sidebar-foreground: #ffffff;
   --sidebar-primary: #d4af37;
-  --sidebar-primary-foreground: #000000;
-  --sidebar-accent: #d4af37;
-  --sidebar-accent-foreground: #000000;
-  --sidebar-border: #2a2a2a;
+  --sidebar-primary-foreground: #1a1a1a;
+  --sidebar-accent: #3d2b1f;
+  --sidebar-accent-foreground: #fce4ec;
+  --sidebar-border: #3d2b1f;
   --sidebar-ring: rgba(212, 175, 55, 0.5);
 }
 
 /* Luxury utility classes */
 @layer utilities {
   .luxury-gradient {
-    background: linear-gradient(135deg, #000000 0%, #d4af37 100%);
+    background: linear-gradient(135deg, #d4af37 0%, #fce4ec 100%);
   }
 
   .gold-gradient {
     background: linear-gradient(135deg, #d4af37 0%, #f4e4a6 100%);
   }
 
+  .blush-gradient {
+    background: linear-gradient(135deg, #fce4ec 0%, #fff0f3 100%);
+  }
+
   .text-gradient-gold {
-    background: linear-gradient(135deg, #d4af37 0%, #f4e4a6 100%);
+    background: linear-gradient(135deg, #d4af37 0%, #b8860b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-blush {
+    background: linear-gradient(135deg, #d4af37 0%, #fce4ec 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
   .elegant-shadow {
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   }
 
   .elegant-shadow-lg {
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
   }
 
   .gold-border-hover {
@@ -109,7 +120,7 @@
 
   .gold-border-hover:hover {
     border-color: #d4af37;
-    box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
   }
 }
 

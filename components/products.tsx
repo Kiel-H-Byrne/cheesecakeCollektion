@@ -1,94 +1,107 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { Sparkles } from "lucide-react"
+import { Button } from "@/components/ui/button"
 
 const products = [
   {
     name: "Georgia Peach",
-    description: "Sweet Georgia peaches swirled into our signature cream cheese base with a hint of bourbon",
+    description: "Sweet Georgia peaches swirled into our signature cream cheese base with a hint of bourbon and brown sugar crumble.",
     price: "$8",
-    color: "bg-chart-3",
+    color: "bg-orange-50",
+    accent: "text-orange-500",
     popular: true,
   },
   {
     name: "Strawberry Shortcake",
-    description: "Fresh strawberries and vanilla cake crumbles in our classic cheesecake cup-cake",
+    description: "Fresh strawberries and vanilla cake crumbles topped with a delicate strawberry glaze and fresh fruit.",
     price: "$7",
-    color: "bg-secondary",
+    color: "bg-rose-50",
+    accent: "text-rose-500",
     popular: false,
   },
   {
     name: "Peanut Butter Cup",
-    description: "Rich peanut butter cheesecake with chocolate chunks and a peanut butter drizzle",
+    description: "Rich peanut butter cheesecake with chocolate chunks, finished with a decadent peanut butter drizzle.",
     price: "$9",
-    color: "bg-primary",
+    color: "bg-amber-50",
+    accent: "text-amber-700",
     popular: true,
   },
   {
     name: "Salted Caramel",
-    description: "Decadent caramel swirled cheesecake with a touch of sea salt and caramel sauce",
+    description: "Decadent caramel swirled cheesecake with a touch of sea salt and handcrafted caramel sauce.",
     price: "$8",
-    color: "bg-chart-3",
+    color: "bg-yellow-50",
+    accent: "text-yellow-700",
     popular: false,
   },
   {
     name: "Lemon Blueberry",
-    description: "Zesty lemon cheesecake studded with fresh blueberries and lemon zest",
+    description: "Zesty lemon cheesecake studded with fresh blueberries and topped with a bright lemon zest glaze.",
     price: "$7",
-    color: "bg-accent",
+    color: "bg-blue-50",
+    accent: "text-blue-500",
     popular: false,
   },
   {
     name: "Chocolate Decadence",
-    description: "Triple chocolate cheesecake with dark chocolate shavings and cocoa dust",
+    description: "Triple chocolate cheesecake with dark chocolate shavings, cocoa dust, and a rich ganache core.",
     price: "$10",
-    color: "bg-muted",
+    color: "bg-stone-50",
+    accent: "text-stone-800",
     popular: true,
   },
 ]
 
 export function Products() {
   return (
-    <section id="products" className="py-20 bg-background">
+    <section id="products" className="py-24 bg-background">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-balance">
-            Our <span className="text-primary">Cup-Cakes</span>
+        <div className="max-w-4xl mx-auto text-center mb-20">
+          <Badge className="mb-4 bg-secondary text-primary border-primary/20 rounded-full px-4 py-1">
+            The Collection
+          </Badge>
+          <h2 className="text-4xl md:text-6xl font-serif font-bold mb-8 text-balance">
+            Signature <span className="text-primary italic">Cup-Cakes</span>
           </h2>
-          <p className="text-lg text-muted-foreground text-balance">
-            Discover our signature collection of gourmet cheesecake cup-cakes, each one a perfect individual indulgence
-            crafted with premium ingredients.
+          <p className="text-lg text-muted-foreground text-balance max-w-2xl mx-auto font-sans">
+            Discover our curated collection of gourmet cheesecake cup-cakes, each bejeweled with the finest ingredients and handcrafted to perfection.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
           {products.map((product, index) => (
             <Card
               key={index}
-              className="border-primary/20 hover:border-primary/40 transition-all duration-300 hover:scale-105 group"
+              className="border-primary/5 hover:border-primary/20 transition-all duration-500 hover:-translate-y-2 group bg-card overflow-hidden rounded-2xl elegant-shadow hover:elegant-shadow-lg"
             >
-              <CardHeader className="pb-4">
-                <div className="flex items-center justify-between">
-                  <CardTitle className="text-xl group-hover:text-primary transition-colors">{product.name}</CardTitle>
-                  {product.popular && (
-                    <Badge variant="secondary" className="bg-primary text-primary-foreground">
-                      Popular
-                    </Badge>
-                  )}
+              <div className={`h-48 ${product.color} relative flex items-center justify-center transition-colors duration-500 group-hover:bg-secondary/30`}>
+                <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
+                <div className="relative w-32 h-32 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center elegant-shadow transition-transform duration-500 group-hover:scale-110 border border-primary/10">
+                  <Sparkles className={`w-16 h-16 ${product.accent} opacity-40 group-hover:opacity-100 transition-opacity duration-500`} />
                 </div>
+                {product.popular && (
+                  <Badge className="absolute top-4 right-4 bg-primary text-primary-foreground font-sans font-bold shadow-lg">
+                    Must Try
+                  </Badge>
+                )}
+              </div>
+              <CardHeader className="pt-8 pb-4">
+                <CardTitle className="text-2xl font-serif group-hover:text-primary transition-colors">{product.name}</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className={`w-full h-32 ${product.color} rounded-lg mb-4 flex items-center justify-center`}>
-                  <div className="w-20 h-20 bg-background/20 rounded-full flex items-center justify-center">
-                    <svg viewBox="0 0 24 24" className="w-12 h-12 text-background/60" fill="currentColor">
-                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z" />
-                      <ellipse cx="12" cy="16" rx="6" ry="2" opacity="0.7" />
-                    </svg>
+                <p className="text-muted-foreground mb-8 text-sm leading-relaxed min-h-[4rem]">
+                  {product.description}
+                </p>
+                <div className="flex items-center justify-between border-t border-primary/5 pt-6">
+                  <div>
+                    <span className="text-3xl font-serif font-bold text-primary">{product.price}</span>
+                    <span className="text-xs text-muted-foreground ml-2 uppercase tracking-tighter">Per Piece</span>
                   </div>
-                </div>
-                <p className="text-muted-foreground mb-4 text-sm leading-relaxed">{product.description}</p>
-                <div className="flex items-center justify-between">
-                  <span className="text-2xl font-bold text-primary">{product.price}</span>
-                  <span className="text-sm text-muted-foreground">per cup-cake</span>
+                  <Button variant="ghost" className="text-primary hover:text-primary-foreground hover:bg-primary rounded-full transition-all duration-300 px-6 font-sans font-semibold">
+                    Details
+                  </Button>
                 </div>
               </CardContent>
             </Card>
