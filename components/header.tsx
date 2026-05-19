@@ -2,6 +2,7 @@ import { Instagram } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { ThemeToggle } from "@/components/theme-toggle"
 import Image from "next/image"
+import logoImage from "@/public/cheeseCakeCollectionImage.jpg"
 
 export function Header() {
   return (
@@ -10,10 +11,13 @@ export function Header() {
         <div className="flex items-center space-x-4">
           <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-primary elegant-shadow">
             <Image
-              src="/cheeseCakeCollectionImage.jpg"
+              src={logoImage}
               alt="The Cheesecake Collection Logo"
               fill
               className="object-cover"
+              priority
+              placeholder="blur"
+              sizes="64px"
             />
           </div>
           <div>

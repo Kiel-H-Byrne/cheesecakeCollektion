@@ -1,6 +1,9 @@
 import { Heart, Leaf, Award, Sparkles } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import Image from "next/image"
+import about1 from "@/public/about-1.jpg"
+import about2 from "@/public/about-2.jpg"
+import about3 from "@/public/about-3.jpg"
 
 export function About() {
   return (
@@ -22,18 +25,22 @@ export function About() {
           <div className="relative group">
             <div className="relative h-[500px] rounded-3xl overflow-hidden elegant-shadow-lg transition-transform duration-500 group-hover:scale-[1.02]">
               <Image
-                src="/about-1.jpg"
+                src={about1}
                 alt="Gourmet cheesecake catering for baby showers and graduations in Atlanta"
                 fill
                 className="object-cover"
+                placeholder="blur"
+                sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
             <div className="absolute -bottom-6 -right-6 w-48 h-48 rounded-2xl overflow-hidden border-8 border-background elegant-shadow hidden md:block">
               <Image
-                src="/about-2.jpg"
+                src={about2}
                 alt="Close up of bejeweled cheesecake cup-cake for birthdays"
                 fill
                 className="object-cover"
+                placeholder="blur"
+                sizes="192px"
               />
             </div>
           </div>
@@ -79,10 +86,12 @@ export function About() {
 
         <div className="relative h-96 w-full rounded-3xl overflow-hidden elegant-shadow">
           <Image
-            src="/about-3.jpg"
+            src={about3}
             alt="The Cheesecake Collection - Premium event dessert catering Atlanta and DMV"
             fill
             className="object-cover"
+            placeholder="blur"
+            sizes="100vw"
           />
           <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
             <div className="text-center px-6">

@@ -1,6 +1,7 @@
 import { Instagram, MapPin, Phone, Mail } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
+import logoImage from "@/public/cheeseCakeCollectionImage.jpg"
 
 export function Footer() {
   return (
@@ -11,10 +12,12 @@ export function Footer() {
             <div className="flex items-center space-x-4 mb-6">
               <div className="relative w-12 h-12 rounded-full overflow-hidden border border-primary">
                 <Image
-                  src="/cheeseCakeCollectionImage.jpg"
+                  src={logoImage}
                   alt="The Cheesecake Collection"
                   fill
                   className="object-cover"
+                  placeholder="blur"
+                  sizes="48px"
                 />
               </div>
               <div>

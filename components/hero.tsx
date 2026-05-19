@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button"
 import { Instagram, MapPin, Sparkles, ChevronDown } from "lucide-react"
 import Image from "next/image"
+import heroBackground from "@/public/hero-background.jpg"
+import logoImage from "@/public/cheeseCakeCollectionImage.jpg"
 
 export function Hero() {
   return (
@@ -8,11 +10,13 @@ export function Hero() {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/hero-background.jpg"
+          src={heroBackground}
           alt="Gourmet bejeweled cheesecakes for events in Atlanta and DMV - The Cheesecake Collection"
           fill
           className="object-cover scale-105 animate-slow-zoom"
           priority
+          placeholder="blur"
+          sizes="100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-background"></div>
       </div>
@@ -21,10 +25,13 @@ export function Hero() {
         <div className="max-w-4xl mx-auto">
           <div className="relative w-24 h-24 mx-auto mb-8 rounded-full overflow-hidden border-2 border-primary/50 elegant-shadow-lg scale-110">
             <Image
-              src="/cheeseCakeCollectionImage.jpg"
+              src={logoImage}
               alt="The Cheesecake Collection"
               fill
               className="object-cover"
+              priority
+              placeholder="blur"
+              sizes="96px"
             />
           </div>
 

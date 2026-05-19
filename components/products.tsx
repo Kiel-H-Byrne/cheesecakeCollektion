@@ -4,47 +4,54 @@ import { Plus } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 
+import georgiaPeach from "@/public/products/georgia-peach.jpg"
+import strawberryShortcake from "@/public/products/strawberry-shortcake.jpg"
+import peanutButterCup from "@/public/products/peanut-butter-cup.jpg"
+import saltedCaramel from "@/public/products/salted-caramel.jpg"
+import lemonBlueberry from "@/public/products/lemon-blueberry.jpg"
+import chocolateDecadence from "@/public/products/chocolate-decadence.jpg"
+
 const products = [
   {
     name: "Georgia Peach",
     description: "Signature cream cheese base with sweet Georgia peaches and bourbon glaze.",
     price: "$8",
-    image: "/products/georgia-peach.jpg",
+    image: georgiaPeach,
     popular: true,
   },
   {
     name: "Strawberry Shortcake",
     description: "Classic vanilla cake crumbles topped with fresh strawberry glaze and berries.",
     price: "$7",
-    image: "/products/strawberry-shortcake.jpg",
+    image: strawberryShortcake,
     popular: false,
   },
   {
     name: "Peanut Butter Cup",
     description: "Rich peanut butter base with chocolate chunks and a decadent drizzle.",
     price: "$9",
-    image: "/products/peanut-butter-cup.jpg",
+    image: peanutButterCup,
     popular: true,
   },
   {
     name: "Salted Caramel",
     description: "Handcrafted caramel swirled cheesecake with a delicate touch of sea salt.",
     price: "$8",
-    image: "/products/salted-caramel.jpg",
+    image: saltedCaramel,
     popular: false,
   },
   {
     name: "Lemon Blueberry",
     description: "Zesty lemon base studded with fresh blueberries and topped with citrus glaze.",
     price: "$7",
-    image: "/products/lemon-blueberry.jpg",
+    image: lemonBlueberry,
     popular: false,
   },
   {
     name: "Chocolate Decadence",
     description: "Triple chocolate base with dark shavings, cocoa dust, and ganache core.",
     price: "$10",
-    image: "/products/chocolate-decadence.jpg",
+    image: chocolateDecadence,
     popular: true,
   },
 ]
@@ -71,12 +78,14 @@ export function Products() {
               key={index}
               className="border-primary/5 hover:border-primary/20 transition-all duration-500 hover:-translate-y-2 group bg-card overflow-hidden rounded-3xl elegant-shadow hover:elegant-shadow-lg"
             >
-              <div className="h-72 relative overflow-hidden">
+              <div className="h-72 relative overflow-hidden bg-muted">
                 <Image
                   src={product.image}
                   alt={`${product.name} bejeweled cheesecake cup-cake - The Cheesecake Collection`}
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
+                  placeholder="blur"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 {product.popular && (
